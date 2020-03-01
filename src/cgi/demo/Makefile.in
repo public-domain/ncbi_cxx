@@ -1,0 +1,9 @@
+# $Id: Makefile.in 11555 2002-04-18 16:12:58Z ucko $
+
+# Meta-makefile
+#################################
+
+APP_PROJ = cgidemo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

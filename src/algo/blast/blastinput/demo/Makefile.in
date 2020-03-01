@@ -1,0 +1,6 @@
+# $Id: Makefile.in 115215 2007-12-07 18:12:44Z camacho $
+
+APP_PROJ = blastinput_demo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

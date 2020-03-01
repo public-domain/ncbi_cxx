@@ -1,0 +1,14 @@
+# $Id: Makefile.in 151315 2009-02-03 18:13:26Z camacho $
+
+SUB_PROJ = unit_test
+REQUIRES = objects gui FLTK MESA
+APP_PROJ = hitmatrix guidetree
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta
+
+hitmatrix:
+	make -f Makefile.hitmatrix_app
+
+guidetree:
+	make -f Makefile.guidetree_app

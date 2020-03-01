@@ -1,0 +1,4 @@
+# $Id: Makefile.conntest.lib 9305 2001-12-13 18:50:56Z ucko $
+
+SRC = ncbi_conntest
+LIB    = xconntest

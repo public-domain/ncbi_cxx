@@ -1,0 +1,4 @@
+# $Id: Makefile.esearch.lib 114943 2007-12-03 19:34:04Z grichenk $
+
+LIB = esearch
+SRC = esearch__ esearch___

@@ -1,0 +1,9 @@
+# $Id: Makefile.in 29451 2003-10-27 20:11:20Z lewisg $
+
+# Meta-makefile (omssa demo apps)
+#################################
+
+APP_PROJ = readresult
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

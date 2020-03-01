@@ -1,0 +1,13 @@
+# $Id: Makefile.in 120091 2008-02-19 16:48:37Z chetvern $
+
+# Meta-makefile("GNOMON" project)
+#################################
+
+ASN_PROJ = gnomon
+
+SUB_PROJ = demo
+
+REQUIRES = objects
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

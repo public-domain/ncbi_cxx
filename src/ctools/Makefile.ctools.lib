@@ -1,0 +1,6 @@
+# $Id: Makefile.ctools.lib 9305 2001-12-13 18:50:56Z ucko $
+
+CPPFLAGS = $(ORIG_CPPFLAGS) $(NCBI_C_INCLUDE)
+SRC = ctools asn_connection
+
+LIB    = xctools

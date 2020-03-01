@@ -1,0 +1,14 @@
+# $Id: Makefile.ncbi_xdbapi_ftds.lib 108046 2007-08-01 14:55:47Z ssikorsk $
+
+SRC = bcp connection context cursor lang_cmd result rpc ftds8_utils
+LIB = ncbi_xdbapi_$(ftds8)
+
+CPPFLAGS = $(FTDS8_INCLUDE) $(ORIG_CPPFLAGS)
+
+# Build shared version when possible
+LIB_OR_DLL = both
+
+# Dependencies for shared library
+DLL_LIB = $(FTDS8_LIB) dbapi_driver
+DLL_DLIB = $(DLL_LIB) xncbi
+LIBS = $(RUNPATH_ORIGIN) $(FTDS8_LIBS) $(NETWORK_LIBS) $(ICONV_LIBS) $(ORIG_LIBS)

@@ -1,0 +1,17 @@
+# $Id: Makefile.in 148731 2008-12-31 16:26:14Z ludwigf $
+
+# Miscellaneous applications
+#################################
+
+SUB_PROJ = sample asn2asn asn2fasta asn2flat id1_fetch blast convert_seq \
+           nmer_repeats objmgr gi2taxid netcache netschedule grid \
+           winmasker dustmasker segmasker blastdb blastfmt \
+           agpconvert id2_fetch agp_validate objextract netbvstore lds_indexer \
+           bdb_env_keeper nw_aligner speedtest idmapper formatguess \
+           multireader read_blast_result splign
+EXPENDABLE_SUB_PROJ = split_cache streamtest
+
+REQUIRES = app
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

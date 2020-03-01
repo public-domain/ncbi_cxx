@@ -1,0 +1,9 @@
+# $Id: Makefile.in 19697 2003-03-19 19:05:42Z thiessen $
+
+# Meta-makefile ("cddalignview" program)
+#################################
+
+APP_PROJ = cddalignview
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,9 @@
+# $Id: Makefile.in 30782 2003-11-25 13:54:09Z thiessen $
+
+# Meta-makefile ("asniotest" program)
+#################################
+
+APP_PROJ = asniotest
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

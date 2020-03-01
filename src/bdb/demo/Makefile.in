@@ -1,0 +1,12 @@
+#################################
+# $Id: Makefile.in 99751 2007-03-06 16:26:28Z vakatov $
+# Author:  Anatoliy Kuznetsov (kuznets@ncbi.nlm.nih.gov)
+#################################
+
+# Meta-makefile -- BDB demo applications
+#################################
+
+APP_PROJ = demo1 demo2 demo3 demo4
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

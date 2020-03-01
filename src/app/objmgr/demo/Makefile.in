@@ -1,0 +1,10 @@
+# $Id: Makefile.in 32470 2004-01-05 18:14:03Z vasilche $
+
+# Meta-makefile("CACHE" project)
+#################################
+
+APP_PROJ = objmgr_demo
+SUB_PROJ = 
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

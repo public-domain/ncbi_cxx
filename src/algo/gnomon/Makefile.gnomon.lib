@@ -1,0 +1,12 @@
+# $Id: Makefile.gnomon.lib 132913 2008-07-03 17:05:29Z dicuccio $
+
+ASN_DEP = seq
+ASN = gnomon
+SRC = $(ASN:%=%__) $(ASN:%=%___) \
+    gnomon_engine gnomon_objmgr score gnomon_model parse hmm gnomon_seq asn1
+LIB = xalgognomon
+DLL_LIB = xobjutil $(SOBJMGR_LIBS)
+
+CXXFLAGS = $(FAST_CXXFLAGS)
+LDFLAGS  = $(FAST_LDFLAGS)
+

@@ -1,0 +1,6 @@
+# $Id: Makefile.in 38185 2004-04-14 14:47:29Z kuznets $
+
+APP_PROJ = test_bm
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

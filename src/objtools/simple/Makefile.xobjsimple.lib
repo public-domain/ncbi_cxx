@@ -1,0 +1,9 @@
+# $Id: Makefile.xobjsimple.lib 102399 2007-04-17 18:13:15Z ucko $
+
+# Build library "xobjsimple"
+###############################
+ASN_DEP = seqset
+
+LIB = xobjsimple
+SRC = simple_om
+

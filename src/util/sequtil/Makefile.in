@@ -1,0 +1,7 @@
+# $Id: Makefile.in 28471 2003-10-08 14:01:50Z shomrat $
+
+LIB_PROJ = sequtil
+SUB_PROJ =
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

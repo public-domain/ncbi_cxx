@@ -1,0 +1,16 @@
+#################################
+# $Id: Makefile.in 125631 2008-04-24 18:17:30Z ivanovp $
+# Author:  Denis Vakatov (vakatov@ncbi.nlm.nih.gov)
+#################################
+
+# Meta-makefile for the "CoreLib"
+#################################
+
+USR_PROJ = precompile
+LIB_PROJ = corelib test_mt test_boost
+SUB_PROJ = test
+
+EXTRA_CONFIGURABLES = Makefile.precompile ncbicfg.c
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

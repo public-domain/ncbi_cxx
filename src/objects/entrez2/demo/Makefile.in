@@ -1,0 +1,12 @@
+# =======================================
+# $Id: Makefile.in 25515 2003-07-31 17:38:51Z dicuccio $
+#
+# Metamakefile for 'entrez2client' app
+# Author: Mike DiCuccio
+# =======================================
+#
+
+APP_PROJ = entrez2client
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

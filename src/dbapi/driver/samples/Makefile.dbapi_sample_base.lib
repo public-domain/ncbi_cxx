@@ -1,0 +1,7 @@
+# $Id: Makefile.dbapi_sample_base.lib 52305 2004-12-20 16:20:48Z ssikorsk $
+
+SRC = dbapi_sample_base
+
+LIB = dbapi_sample_base
+
+CPPFLAGS = $(ORIG_CPPFLAGS) $(SYBASE_INCLUDE)

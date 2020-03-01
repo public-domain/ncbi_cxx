@@ -1,0 +1,18 @@
+#################################
+# $Id: Makefile.alnmgr_sample.app 118708 2008-01-31 17:58:33Z ucko $
+#################################
+
+REQUIRES = objects 
+
+APP = alnmgr_sample
+SRC = alnmgr_sample
+
+# new_project.sh will copy everything in the following block to any
+# Makefile.*_app generated from this sample project.  Do not change
+# the lines reading "### BEGIN/END COPIED SETTINGS" in any way.
+
+### BEGIN COPIED SETTINGS
+LIB = xalnmgr tables $(OBJMGR_LIBS)
+
+LIBS = $(CMPRS_LIBS) $(NETWORK_LIBS) $(DL_LIBS) $(ORIG_LIBS)
+### END COPIED SETTINGS

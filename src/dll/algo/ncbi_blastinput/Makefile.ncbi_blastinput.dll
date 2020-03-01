@@ -1,0 +1,14 @@
+# $Id: Makefile.ncbi_blastinput.dll 146779 2008-12-02 14:55:20Z ivanov $
+
+DLL = ncbi_blastinput
+
+HOSTED_LIBS    = blastinput
+
+DEPENDENCIES   = ncbi_core ncbi_algo ncbi_general ncbi_misc \
+                 ncbi_seq ncbi_misc ncbi_seqext  \
+                 ncbi_xloader_genbank ncbi_xloader_blastdb ncbi_xreader \
+                 ncbi_xreader_id1 ncbi_xreader_id2 ncbi_xreader_cache \
+                 ncbi_xobjsimple ncbi_xloader_blastdb_rmt
+
+CPPFLAGS = -DNCBI_XALGO_BLASTINPUT_EXPORTS
+

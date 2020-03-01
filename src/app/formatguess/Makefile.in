@@ -1,0 +1,6 @@
+# $Id: Makefile.in 148731 2008-12-31 16:26:14Z ludwigf $
+
+APP_PROJ = formatguess
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

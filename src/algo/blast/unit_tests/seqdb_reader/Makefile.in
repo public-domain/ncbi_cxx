@@ -1,0 +1,8 @@
+# $Id: Makefile.in 149176 2009-01-07 21:11:18Z ucko $
+
+APP_PROJ = seqdb_unit_test
+
+REQUIRES = Boost.Test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

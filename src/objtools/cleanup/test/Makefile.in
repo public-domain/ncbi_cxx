@@ -1,0 +1,10 @@
+# $Id: Makefile.in 79185 2006-03-20 16:17:58Z rsmith $
+
+# Meta-makefile("CACHE" project)
+#################################
+
+APP_PROJ = test_basic_cleanup
+SUB_PROJ = 
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

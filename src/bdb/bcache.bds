@@ -1,0 +1,9 @@
+# $Id: bcache.bds 103491 2007-05-04 17:18:18Z kazimird $
+# BDB structure file for local cache (blob table)
+
+key      string(256) PK 
+version  int4        PK
+subkey   string(256) PK
+
+data     blob
+

@@ -1,0 +1,8 @@
+# $Id: Makefile.in 113776 2007-11-08 22:38:18Z camacho $
+
+APP_PROJ = gene_info_unit_test
+
+REQUIRES = Boost.Test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,14 @@
+# $Id: Makefile.bdb.lib 105481 2007-06-11 20:16:21Z kuznets $
+#
+# Build library "bdb" -- Berkeley DB support
+#################################
+
+SRC = bdb_types bdb_file bdb_cursor bdb_blob \
+      bdb_expt bdb_env bdb_filedump bdb_volumes \
+      bdb_trans bdb_query bdb_query_parser_main bdb_util \
+      bdb_checkpoint_thread bdb_ext_blob
+
+
+LIB = bdb
+
+CPPFLAGS = $(ORIG_CPPFLAGS) $(BERKELEYDB_INCLUDE)

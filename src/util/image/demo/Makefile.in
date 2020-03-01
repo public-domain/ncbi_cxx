@@ -1,0 +1,10 @@
+# $Id: Makefile.in 86568 2006-07-24 13:35:19Z dicuccio $
+# Author:  Mike DiCuccio
+
+# Meta-makefile for image testapp
+#################################
+
+APP_PROJ = sub_image conv_image image_info
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

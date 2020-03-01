@@ -1,0 +1,9 @@
+# $Id: Makefile.in 127420 2008-05-12 21:42:17Z joukovv $
+
+# Meta-makefile
+#################################
+
+APP_PROJ = lds_test test_lds
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

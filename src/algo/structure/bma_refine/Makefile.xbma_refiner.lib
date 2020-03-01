@@ -1,0 +1,23 @@
+# $Id: Makefile.xbma_refiner.lib 120300 2008-02-21 15:33:20Z thiessen $
+#
+# Block Multiple Alignment Refiner library
+#
+##########################################
+
+REQUIRES = objects
+
+ASN_DEP = cdd
+
+LIB =   xbma_refiner
+
+SRC =   RowSelector \
+        ColumnScorer \
+        BMAUtils \
+        BlockBoundaryAlgorithm \
+        BlockEditor \
+        AlignRefineScorer \
+        RefinerPhase \
+        RefinerCycle \
+        RefinerTrial \
+        RefinerEngine \
+        Interface

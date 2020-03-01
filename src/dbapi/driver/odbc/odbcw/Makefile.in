@@ -1,0 +1,8 @@
+# $Id: Makefile.in 89832 2006-09-13 20:13:24Z ssikorsk $
+
+LIB_PROJ = ncbi_xdbapi_odbcw
+
+REQUIRES = ODBC
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

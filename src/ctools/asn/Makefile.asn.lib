@@ -1,0 +1,10 @@
+# $Id: Makefile.asn.lib 9305 2001-12-13 18:50:56Z ucko $
+
+# Build library "XASN"
+#################################
+
+SRC = asnio asnwrite
+LIB    = xasn
+
+CPPFLAGS = $(ORIG_CPPFLAGS) \
+  $(NCBI_C_INCLUDE)

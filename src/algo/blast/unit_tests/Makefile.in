@@ -1,0 +1,9 @@
+# $Id: Makefile.in 149176 2009-01-07 21:11:18Z ucko $
+
+# Meta-makefile (deferred BLAST unit tests)
+#################################
+
+SUB_PROJ = blast_format blastdb seqdb_reader
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

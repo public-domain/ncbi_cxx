@@ -1,0 +1,6 @@
+# $Id: Makefile.in 29354 2003-10-24 18:46:36Z sapojnik $
+
+APP_PROJ = dbapi_testspeed
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

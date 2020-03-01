@@ -1,0 +1,4 @@
+# $Id: Makefile.pbacktest.lib 10030 2002-01-29 16:02:19Z lavr $
+
+SRC = pbacktest
+LIB = xpbacktest

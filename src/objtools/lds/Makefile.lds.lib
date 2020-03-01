@@ -1,0 +1,12 @@
+# $Id: Makefile.lds.lib 127506 2008-05-13 16:54:40Z joukovv $
+
+# Build library "lds"
+###############################
+ASN_DEP = seq submit seqset biblio
+
+LIB = lds
+SRC = lds lds_reader lds_query \
+      lds_admin lds_coreobjreader lds_files lds_object lds_manager
+
+# Dependencies for shared library
+DLL_LIB = bdb

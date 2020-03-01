@@ -1,0 +1,4 @@
+# $Id: Makefile.creaders.lib 67398 2005-08-09 19:57:49Z jcherry $
+
+LIB = creaders
+SRC = alnread

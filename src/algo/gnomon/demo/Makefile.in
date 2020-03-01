@@ -1,0 +1,9 @@
+# $Id: Makefile.in 69401 2005-09-15 21:22:13Z chetvern $
+
+# Meta-makefile("GNOMON" project)
+#################################
+
+APP_PROJ = localfinder
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

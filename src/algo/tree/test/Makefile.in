@@ -1,0 +1,8 @@
+# $Id: Makefile.in 43881 2004-07-21 18:21:21Z kuznets $
+
+# Meta-makefile
+
+APP_PROJ = test_algo_tree
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

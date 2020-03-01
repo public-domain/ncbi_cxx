@@ -1,0 +1,6 @@
+# $Id: Makefile.gene_info_writer.lib 140909 2008-09-22 18:25:56Z ucko $
+
+LIB = gene_info_writer
+SRC = gene_info_writer
+
+ASN_DEP = blastdb

@@ -1,0 +1,6 @@
+# $Id: Makefile.test_mt.lib 21669 2003-05-08 20:50:14Z grichenk $
+
+SRC = test_mt
+LIB    = test_mt
+
+# REQUIRES = MT

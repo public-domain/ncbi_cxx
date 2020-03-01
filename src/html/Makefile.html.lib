@@ -1,0 +1,8 @@
+# $Id: Makefile.html.lib 68032 2005-08-22 12:14:53Z ivanov $
+
+# Build library "XHTML"
+#################################
+
+SRC = node html htmlhelper page pager selection components \
+      jsmenu commentdiag indentstream html_exception writer_htmlenc
+LIB = xhtml

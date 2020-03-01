@@ -1,0 +1,11 @@
+# $Id: Makefile.xalgodustmask.lib 91971 2006-10-19 13:43:43Z ucko $
+
+ASN_DEP = seqset
+
+LIB = xalgodustmask
+
+SRC = symdust
+
+CXXFLAGS = $(FAST_CXXFLAGS)
+LDFLAGS  = $(FAST_LDFLAGS)
+

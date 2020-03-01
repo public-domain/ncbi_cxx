@@ -1,0 +1,14 @@
+# $Id: Makefile.ncbi_xloader_lds.lib 77903 2006-02-24 19:24:12Z gouriano $
+
+# Build library "ncbi_xloader_lds"
+###############################
+
+LIB = ncbi_xloader_lds
+SRC = lds_dataloader
+
+ASN_DEP = seq
+
+CPPFLAGS = $(ORIG_CPPFLAGS)
+
+# Dependencies for shared library
+DLL_LIB = bdb lds

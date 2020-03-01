@@ -1,0 +1,9 @@
+# $Id: Makefile.in 23526 2003-06-18 17:23:52Z thiessen $
+
+# Meta-makefile ("struct_dp_demo" program)
+#################################
+
+APP_PROJ = struct_dp_demo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

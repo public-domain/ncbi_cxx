@@ -1,0 +1,8 @@
+# $Id: Makefile.in 88825 2006-08-29 20:13:49Z papadopo $
+
+APP_PROJ = blastinput_unit_test
+
+REQUIRES = Boost.Test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

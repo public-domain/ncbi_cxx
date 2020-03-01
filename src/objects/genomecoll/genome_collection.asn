@@ -1,0 +1,209 @@
+-- $Id: genome_collection.asn 149161 2009-01-07 19:55:26Z fedorov $
+-- **********************************************************************
+--
+--  NCBI Genome Collections
+--  by Mike DiCuccio, Avi Kimchi, Karl Sirotkin, Josh Cherry
+--
+-- **********************************************************************
+
+
+
+
+NCBI-GenomeCollection DEFINITIONS ::=
+BEGIN
+
+IMPORTS Dbtag FROM NCBI-General
+        MolInfo, Seqdesc, Seq-descr, Delta-ext FROM NCBI-Sequence
+        Seq-id FROM NCBI-Seqloc
+        BioSource FROM NCBI-BioSource;
+
+GC-Genome ::= SEQUENCE
+{
+    -- Gencoll identifier for this genome
+    id SET OF Dbtag,
+
+    -- project ID for this genome
+    -- this is the ID for this asssembly and may reflect the submitter/source
+    projects SET OF GC-Project OPTIONAL,
+
+    -- Various attributes assigned at this level:
+    -- biosrc, comments, publications...
+    descr Seq-descr OPTIONAL , 
+
+    -- official list of chromosome names
+    -- this should be the complete expected set of chromosomes
+    -- regardless of whether they are represented in *any*
+    -- genomic part
+    chr-names SET OF VisibleString OPTIONAL,
+
+    -- the bits that make up this genome
+    -- this preserves the expected display order
+    parts SET OF GC-GenomicPart
+    
+
+}
+
+GC-Project ::= SEQUENCE {
+        project-role VisibleString, -- Genbank / Refseq
+        project-id INTEGER
+    } 
+
+GC-GenomicPart ::= CHOICE {
+    assembly GC-Assembly,
+    mol GC-Replicon,
+    seqs GC-Sequence
+}
+
+
+GC-Assembly ::= SEQUENCE
+{
+    -- The identifier of this assembly
+    -- examples: GC internal id, Assembly-accession.version
+    id SET OF Dbtag,
+
+    -- project ID for this genome
+    -- this is the ID for this asssembly and may reflect the submitter/source
+    projects SET OF GC-Project OPTIONAL,
+
+    -- Names of the assembly
+    name VisibleString OPTIONAL,
+    submitter-name VisibleString OPTIONAL,
+
+    -- Various attributes assigned at this level:
+    -- biosrc, comments, publications...
+    descr Seq-descr OPTIONAL , 
+
+    -- flag: is this assembly partial?
+    -- **NOTE: not set = not known!!
+    partial BOOLEAN OPTIONAL,
+
+    -- flag: is it reference assembly?
+    --  ** NOTE: not set = not known!
+    reference BOOLEAN OPTIONAL,
+
+    -- level of coverage for this assembly
+    -- **NOTE: not set = not known!!
+    coverage REAL OPTIONAL,
+
+    -- collections of molecules for this assembly
+    mols SET OF GC-Replicon OPTIONAL,
+
+    -- unplaced bits for this asssembly
+    unplaced SET OF GC-Sequence OPTIONAL, 
+    
+    -- Lower level sequences that compose this assembly
+    -- in case we want all components, without their structure as scaffolds
+    bits SET OF GC-Sequence OPTIONAL,
+
+     -- statistics
+    -- "stats" field holds stats for all chromosomes combined: ordered/unordered scaffolds
+    -- "unplaced-stats" holds stats for ChrUn which is omitted from "stats"
+    stats GC-SequenceStats OPTIONAL,
+    unplaced-stats GC-Scaf-stats OPTIONAL
+}
+
+GC-Replicon ::= SEQUENCE
+{
+    -- the sequence(s) representing this molecule
+    -- in the case of 2L and 2R - the molecule is represented by 
+    -- several sequences, and there is no seq-id of "chr 2" as a whole.
+    sequence CHOICE {
+        single GC-Sequence,
+        set SET OF GC-Sequence
+    },
+
+    -- name for this molecule
+    name VisibleString,  -- the official name,
+    -- If the chromosome has a different name in this assembly.
+    local-name VisibleString OPTIONAL, 
+
+    -- type of molecule
+    type MolInfo OPTIONAL
+
+}
+
+-- GC-Sequence:
+-- Used for scaffolds, scaffold-sets and components in Gencoll terminology.
+-- Theoretically can support sequences decsribed with more levels than
+-- Chromosome / scaffold-set/scaffold/component.
+-- The meaning of the GC-Sequence record - if it is component, scaffold or 
+-- or scaffold-set, is defined by its context.
+-- ??? DO WE NEED A FIELD TO SPECIFY WHAT LEVEL IT IS???
+--
+-- GC-Sequences are made of GC-Sequences: At the lowest level there is only one
+-- seq-id of a component with no further structure.
+GC-Sequence ::= SEQUENCE {
+    -- identifiers are: Local / gpipe-satellite / genbank / refseq 
+    -- local is merely local name (or maybe with WGS accession??)
+    -- others are accession/ver/gi
+    --
+    -- Main identifier: 
+    -- we will report the one that matches the context of who asked. 
+    seq-id Seq-id,
+    -- Other known identifiers: Local / gpipe-satellite / genbank / refseq 
+    seq-id-synonyms SET OF Seq-id OPTIONAL,
+
+    -- Various attributes assigned at this level:
+    -- biosrc, comments, publications...
+    descr Seq-descr OPTIONAL , 
+
+    -- ordered set of scaffolds/components that make this sequence
+    ordered SET OF GC-Sequence OPTIONAL,
+    -- locations of ordered scaffolds/components
+    structure Delta-ext OPTIONAL,
+
+    -- unlocalized scaffolds/components in this sequence
+    -- these are unordered sequences that belong to this sequence but whose
+    -- final relationship within the sequence is unknown
+    -- [Note: Not populated at scaffold level]
+    unordered SET OF GC-Sequence OPTIONAL,
+    
+    -- statistics
+    stats GC-SequenceStats OPTIONAL
+}
+
+-- Stats of complex objects
+-- Used at assembly and chromosome levels
+GC-SequenceStats ::= SEQUENCE {
+  all-scaf GC-Scaf-stats,
+  ordered-scaf GC-Scaf-stats,
+  unordered-scaf GC-Scaf-stats
+}
+
+-- Scaf-stats
+-- All stats for one type of data
+-- Can be at any level. Even a single scaffold might have stats.
+GC-Scaf-stats ::= SEQUENCE {
+  replicon-count INTEGER OPTIONAL, -- How many chromosomes
+        --(needed to report #chromsomes w/ ordered/unordered scaffolds)
+  scaffold-count INTEGER OPTIONAL, -- How many scaffolds
+  component-count INTEGER OPTIONAL, -- How many components
+  component-span-count INTEGER OPTIONAL, -- How many placements of components
+  length SEQUENCE {
+    total-length INTEGER,
+    ungapped-length INTEGER,
+    min-gapped-scaf-length INTEGER, 
+    max-gapped-scaf-length INTEGER, 
+    min-ungapped-scaf-length INTEGER,
+    max-ungapped-scaf-length INTEGER
+  },
+  composition SEQUENCE {
+    active-finishing-bases INTEGER,
+    draft-bases INTEGER,
+    finished-bases INTEGER,
+    whole-genome-finishing-bases INTEGER,
+    other-sequences INTEGER,
+    pre-draft INTEGER,
+    wgs-bases INTEGER,
+    estimated-bases-in-gaps INTEGER
+  } OPTIONAL,
+  n50 INTEGER OPTIONAL,
+  gap-closure SEQUENCE {
+    spanned-gaps INTEGER,
+    unspanned-gaps INTEGER
+  } OPTIONAL
+}
+
+
+
+END

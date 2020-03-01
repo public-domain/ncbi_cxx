@@ -1,0 +1,9 @@
+# $Id: Makefile.in 13556 2002-08-08 18:18:46Z ucko $
+
+# Meta-makefile("ctools test" project)
+#################################
+
+APP_PROJ = test_asn_converter
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

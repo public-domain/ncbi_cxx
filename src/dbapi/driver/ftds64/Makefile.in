@@ -1,0 +1,10 @@
+# $Id: Makefile.in 88447 2006-08-22 20:10:06Z ssikorsk $
+
+USR_PROJ = @freetds@
+POTENTIAL_SUB_PROJ = freetds
+SUB_PROJ = odbc dblib ctlib
+
+REQUIRES = FreeTDS
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

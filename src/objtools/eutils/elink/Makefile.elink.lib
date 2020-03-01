@@ -1,0 +1,4 @@
+# $Id: Makefile.elink.lib 114943 2007-12-03 19:34:04Z grichenk $
+
+LIB = elink
+SRC = elink__ elink___

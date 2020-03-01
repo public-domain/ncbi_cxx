@@ -1,0 +1,11 @@
+# $Id: Makefile.cddalignview.lib 89527 2006-09-10 01:57:58Z vakatov $
+
+ASN_DEP = seq cdd ncbimime
+
+SRC = \
+	cav_alignset \
+	cav_alndisplay \
+	cav_function \
+	cav_seqset
+
+LIB = xcddalignview

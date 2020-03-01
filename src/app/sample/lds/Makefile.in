@@ -1,0 +1,9 @@
+# $Id: Makefile.in 53605 2005-01-11 20:41:47Z kuznets $
+
+# Meta-makefile
+#################################
+
+APP_PROJ = lds_sample
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

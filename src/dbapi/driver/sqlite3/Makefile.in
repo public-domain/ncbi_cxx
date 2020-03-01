@@ -1,0 +1,9 @@
+# $Id: Makefile.in 84174 2006-06-12 21:04:02Z ucko $
+
+LIB_PROJ = ncbi_xdbapi_sqlite3
+SUB_PROJ = samples
+
+REQUIRES = SQLITE3
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

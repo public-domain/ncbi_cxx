@@ -1,0 +1,7 @@
+# $Id: Makefile.xregexp.lib 137708 2008-08-18 15:55:47Z ivanov $
+
+SRC = regexp arg_regexp mask_regexp
+
+LIB = xregexp
+
+CPPFLAGS = $(ORIG_CPPFLAGS) $(PCRE_INCLUDE)

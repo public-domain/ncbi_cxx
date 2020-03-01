@@ -1,0 +1,4 @@
+# $Id: Makefile.einfo.lib 114943 2007-12-03 19:34:04Z grichenk $
+
+LIB = einfo
+SRC = einfo__ einfo___

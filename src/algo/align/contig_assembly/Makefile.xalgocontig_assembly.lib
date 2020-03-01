@@ -1,0 +1,10 @@
+# $Id: Makefile.xalgocontig_assembly.lib 89476 2006-09-08 15:38:13Z ucko $
+
+ASN_DEP = seq blast xnetblast
+
+SRC = contig_assembly
+
+LIB = xalgocontig_assembly
+
+CXXFLAGS = $(FAST_CXXFLAGS)
+LDFLAGS  = $(FAST_LDFLAGS)

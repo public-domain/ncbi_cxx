@@ -1,0 +1,15 @@
+# $Id: Makefile.ncbi_xreader_id2.lib 128803 2008-05-27 15:17:40Z ucko $
+
+SRC = reader_id2
+
+LIB = ncbi_xreader_id2
+
+ASN_DEP = id2
+
+# Build shared version when possible
+LIB_OR_DLL = both
+
+CPPFLAGS = $(ORIG_CPPFLAGS) $(Z_INCLUDE)
+
+# Dependencies for shared library (disabled due to problems on Darwin)
+# DLL_LIB = xconnect ncbi_xreader$(DLL)

@@ -1,0 +1,4 @@
+# $Id: Makefile.uilist.lib 118057 2008-01-23 20:18:13Z grichenk $
+
+SRC = uilist__ uilist___
+LIB = uilist

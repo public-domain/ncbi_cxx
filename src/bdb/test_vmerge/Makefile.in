@@ -1,0 +1,12 @@
+#################################
+# $Id: Makefile.in 93909 2006-11-20 16:26:17Z kuznets $
+# Author:  Anatoliy Kuznetsov (kuznets@ncbi.nlm.nih.gov)
+#################################
+
+# Meta-makefile -- BDB test app
+#################################
+
+APP_PROJ = bdbtest_vmerge
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

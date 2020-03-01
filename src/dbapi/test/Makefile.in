@@ -1,0 +1,7 @@
+# $Id: Makefile.in 137442 2008-08-14 19:39:02Z ssikorsk $
+
+APP_PROJ = dbapi_unit_test dbapi_context_test
+SUB_PROJ = driver
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

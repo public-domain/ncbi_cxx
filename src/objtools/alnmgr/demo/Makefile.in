@@ -1,0 +1,8 @@
+# $Id: Makefile.in 118708 2008-01-31 17:58:33Z ucko $
+
+
+APP_PROJ = alnvwr alnmrg aln_build
+SUB_PROJ =
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

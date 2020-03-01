@@ -1,0 +1,11 @@
+# $Id: Makefile.xobjread.lib 151845 2009-02-09 14:50:16Z ludwigf $
+
+ASN_DEP = seq seqset
+
+LIB = xobjread
+SRC = fasta readfeat gff_reader agp_util agp_read aln_reader cigar getfeature phrap \
+      fasta_aln_builder reader_base bed_reader microarray_reader rm_reader acc_pattern \
+      wiggle_reader wiggle_data gff3_reader \
+      ucscid idmap idmapper idmapper_builtin idmapper_user idmapper_site \
+      idmapper_database
+DLL_LIB = creaders

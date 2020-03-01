@@ -1,0 +1,4 @@
+# $Id: Makefile.epost.lib 114943 2007-12-03 19:34:04Z grichenk $
+
+LIB = epost
+SRC = epost__ epost___

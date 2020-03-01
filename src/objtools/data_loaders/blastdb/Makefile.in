@@ -1,0 +1,9 @@
+# $Id: Makefile.in 149176 2009-01-07 21:11:18Z ucko $
+
+# Meta-makefile (ncbi_xloader_blastdb)
+##################################
+
+LIB_PROJ = ncbi_xloader_blastdb ncbi_xloader_blastdb_rmt
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

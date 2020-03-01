@@ -1,0 +1,9 @@
+# $Id: Makefile.ncbi_xloader_cdd.lib 88996 2006-08-31 18:33:11Z ucko $
+
+# Build library "ncbi_xloader_cdd"
+###############################
+
+LIB = ncbi_xloader_cdd
+SRC = cdd
+
+ASN_DEP = seqset

@@ -1,0 +1,4 @@
+# $Id: Makefile.esummary.lib 114943 2007-12-03 19:34:04Z grichenk $
+
+LIB = esummary
+SRC = esummary__ esummary___

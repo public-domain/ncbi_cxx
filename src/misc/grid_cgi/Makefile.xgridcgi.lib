@@ -1,0 +1,9 @@
+# $Id: Makefile.xgridcgi.lib 74369 2005-12-15 18:21:16Z didenko $
+
+# Build library "XGRIDCGI"
+#################################
+
+SRC = grid_cgiapp remote_cgiapp cgi2grid cgi_session_netcache
+LIB = xgridcgi
+
+CPPFLAGS = $(ORIG_CPPFLAGS) $(FASTCGI_INCLUDE)

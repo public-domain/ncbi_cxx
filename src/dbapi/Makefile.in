@@ -1,0 +1,10 @@
+# $Id: Makefile.in 110618 2007-09-14 17:41:29Z ucko $
+
+SUB_PROJ = driver cache lang_bind test
+
+LIB_PROJ = dbapi
+
+REQUIRES = dbapi
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

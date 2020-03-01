@@ -1,0 +1,6 @@
+# $Id: Makefile.in 127564 2008-05-13 21:14:10Z vakatov $
+
+APP_PROJ = python_ncbi_dbapi_test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

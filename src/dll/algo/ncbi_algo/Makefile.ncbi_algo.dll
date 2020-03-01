@@ -1,0 +1,35 @@
+# $Id: Makefile.ncbi_algo.dll 146810 2008-12-02 16:53:01Z ivanov $
+
+DLL = ncbi_algo
+
+HOSTED_LIBS    = \
+                 fastme                 \
+                 xalgocontig_assembly   \
+                 xalgodustmask          \
+                 xalgognomon            \
+                 xalgophytree           \
+                 xalgoseq               \
+                 xalgoseqqa             \
+                 xalgotext              \
+                 xalgowinmask           \
+                 \
+                 prosplign              \
+                 xalgoalignnw           \
+                 xalgoalignsplign       \
+                 xalgoalignutil         \
+                 \
+                 blast                  \
+                 cobalt                 \
+                 composition_adjustment \
+                 xalgoblastdbindex      \
+                 xblast
+
+DEPENDENCIES   = \
+                 ncbi_core ncbi_general ncbi_misc \
+                 ncbi_seq ncbi_misc ncbi_seqext  \
+                 ncbi_xloader_genbank ncbi_xreader \
+                 ncbi_xreader_id1 ncbi_xreader_id2 ncbi_xreader_cache \
+                 ncbi_xobjsimple
+
+CPPFLAGS = -DNCBI_XALGO_EXPORTS
+

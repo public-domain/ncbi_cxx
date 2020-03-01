@@ -1,0 +1,29 @@
+# $Id: Makefile.seqdb.lib 145709 2008-11-14 21:10:14Z satskyse $
+
+ASN_DEP = seqsplit blastdb
+
+SRC = seqdb \
+seqdbbitset \
+seqdbfilter \
+seqdbatlas \
+seqdbalias \
+seqdbcommon \
+seqdbfile \
+seqdbimpl \
+seqdbvol \
+seqdbvolset \
+seqdboidlist \
+seqdbisam \
+seqdbtax \
+seqdbgilistset \
+seqdbexpert \
+seqdbblob \
+seqdbcol \
+seqdbobj
+
+LIB = seqdb
+
+CFLAGS   = $(FAST_CFLAGS)
+CXXFLAGS = $(FAST_CXXFLAGS)
+LDFLAGS  = $(FAST_LDFLAGS)
+

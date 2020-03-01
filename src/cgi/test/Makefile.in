@@ -1,0 +1,6 @@
+# $Id: Makefile.in 124306 2008-04-11 13:47:51Z ucko $
+
+APP_PROJ = cgitest test_multipart_cgi cgi_io_test test_cgi_entry_reader
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

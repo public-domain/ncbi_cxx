@@ -1,0 +1,10 @@
+# $Id: Makefile.in 130255 2008-06-09 16:39:23Z astashya $
+
+# Meta-makefile("ALGO" project)
+#################################
+
+APP_PROJ = cpgdemo regexplocdemo xcompareannotsdemo
+
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,7 @@
+# $Id: Makefile.in 43845 2004-07-20 22:38:31Z ucko $
+
+USR_PROJ = check
+
+# Use abs_srcdir here to avoid trouble from fake-root setups...
+srcdir = @abs_srcdir@
+include @builddir@/Makefile.meta

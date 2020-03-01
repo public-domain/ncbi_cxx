@@ -1,0 +1,28 @@
+# $Id: Makefile.struct_util_demo.app 91321 2006-10-06 14:45:48Z ucko $
+# Author:  Paul Thiessen
+
+# Build application "struct_util_demo"
+#################################
+
+REQUIRES = objects
+
+APP = struct_util_demo
+
+SRC = struct_util_demo
+
+LIB = xstruct_util \
+      xstruct_dp \
+      ncbimime \
+      cdd \
+      scoremat \
+      cn3d \
+      mmdb \
+      $(BLAST_LIBS) \
+      $(OBJMGR_LIBS)
+
+LIBS = $(NETWORK_LIBS) $(CMPRS_LIBS) $(DL_LIBS) $(ORIG_LIBS)
+
+# These are necessary to avoid build errors in some configurations
+# (notably 32-bit SPARC WorkShop Release).
+CXXFLAGS = $(FAST_CXXFLAGS)
+LDFLAGS = $(FAST_LDFLAGS)

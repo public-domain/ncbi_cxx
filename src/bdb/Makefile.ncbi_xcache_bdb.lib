@@ -1,0 +1,14 @@
+# $Id: Makefile.ncbi_xcache_bdb.lib 58248 2005-03-23 14:45:13Z vasilche $
+#
+# Build library "bdb_cache" -- Berkeley DB blob cache
+#####################################################
+
+SRC = bdb_blobcache
+
+LIB = ncbi_xcache_bdb
+
+LIB_OR_DLL = both
+DLL_LIB = bdb xutil
+
+CPPFLAGS = $(ORIG_CPPFLAGS) $(BERKELEYDB_INCLUDE)
+LIBS = $(BERKELEYDB_LIBS) $(ORIG_LIBS)

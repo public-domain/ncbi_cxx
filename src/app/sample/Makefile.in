@@ -1,0 +1,11 @@
+# $Id: Makefile.in 115190 2007-12-07 16:15:20Z ucko $
+
+# Meta-makefile
+#################################
+
+SUB_PROJ = \
+   basic cgi dbapi objects objmgr alnmgr soap lds netschedule netcache blast \
+   asn eutils unit_test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,9 @@
+# $Id: Makefile.in 53796 2005-01-13 16:41:26Z bealer $
+
+# Meta-makefile("seqdb/demo" project)
+#################################
+
+EXPENDABLE_APP_PROJ = seqdb_demo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

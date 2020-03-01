@@ -1,0 +1,9 @@
+# $Id: Makefile.in 93819 2006-11-17 07:30:47Z kuznets $
+
+# Meta-makefile 
+#################################
+
+APP_PROJ = test_vmerge
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

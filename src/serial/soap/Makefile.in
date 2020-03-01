@@ -1,0 +1,9 @@
+# $Id: Makefile.in 50564 2004-11-17 19:49:01Z gouriano $
+
+#################################
+
+LIB_PROJ = soap
+SUB_PROJ = 
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

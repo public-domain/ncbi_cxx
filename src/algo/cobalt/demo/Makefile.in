@@ -1,0 +1,9 @@
+# $Id: Makefile.in 72258 2005-11-07 18:15:52Z papadopo $
+
+# Meta-makefile("ALGO" project)
+#################################
+
+APP_PROJ = cobalt
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

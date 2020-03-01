@@ -1,0 +1,7 @@
+# $Id: Makefile.cgi_redirect.lib 34091 2004-02-10 13:36:40Z ivanov $
+
+# Build library "XCGI_REDIRECT"
+#################################
+
+SRC = redirect
+LIB = xcgi_redirect

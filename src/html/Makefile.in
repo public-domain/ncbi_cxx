@@ -1,0 +1,12 @@
+#################################
+# $Id: Makefile.in 1801 1999-10-18 15:17:40Z vakatov $
+#################################
+
+# Meta-makefile ("html" project)
+#################################
+
+LIB_PROJ = html
+SUB_PROJ = test demo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

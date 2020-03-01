@@ -1,0 +1,11 @@
+# $Id: Makefile.in 70845 2005-10-17 15:05:03Z rsmith $
+
+# Meta-makefile (object utilities)
+##################################
+
+LIB_PROJ = cleanup
+
+# SUB_PROJ = test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

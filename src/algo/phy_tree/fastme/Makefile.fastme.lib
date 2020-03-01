@@ -1,0 +1,7 @@
+# $Id: Makefile.fastme.lib 34102 2004-02-10 15:16:04Z jcherry $
+
+SRC = NNI bNNI bme fastme gme graph heap inputs newickstring traverse
+LIB = fastme
+
+CXXFLAGS = $(FAST_CXXFLAGS)
+LDFLAGS  = $(FAST_LDFLAGS)

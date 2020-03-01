@@ -1,0 +1,9 @@
+# $Id: Makefile.in 158334 2009-04-23 20:00:18Z gouriano $
+
+LIB_PROJ = ncbi_xdbapi_ftds64_odbc
+SUB_PROJ = samples
+
+REQUIRES = FreeTDS -XCODE
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,10 @@
+# $Id: Makefile.xalgoblastdbindex_search.lib 140978 2008-09-23 12:48:49Z morgulis $
+
+LIB = xalgoblastdbindex_search
+
+SRC = sr_search
+
+CXXFLAGS = -DDO_INLINE $(FAST_CXXFLAGS)
+LDFLAGS  = $(FAST_LDFLAGS)
+
+ASN_DEP = seqset

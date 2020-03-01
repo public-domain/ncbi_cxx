@@ -1,0 +1,14 @@
+# $Id: Makefile.writedb.lib 134331 2008-07-17 18:58:42Z ucko $
+
+ASN_DEP = seqsplit blastdb
+
+SRC = writedb writedb_impl writedb_volume writedb_files writedb_isam \
+      writedb_convert writedb_general writedb_column mask_info_registry \
+	  taxid_set build_db multisource_util
+
+LIB = writedb
+
+CFLAGS   = $(FAST_CFLAGS)
+CXXFLAGS = $(FAST_CXXFLAGS)
+LDFLAGS  = $(FAST_LDFLAGS)
+

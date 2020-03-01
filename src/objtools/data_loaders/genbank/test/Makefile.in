@@ -1,0 +1,11 @@
+# $Id: Makefile.in 32467 2004-01-05 17:59:34Z vasilche $
+
+# Meta-makefile (tests for object manager)
+#################################
+
+APP_PROJ = \
+	test_reader_id1 test_reader_pubseq \
+	test_objmgr_gbloader test_objmgr_gbloader_mt
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

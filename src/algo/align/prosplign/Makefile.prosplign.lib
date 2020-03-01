@@ -1,0 +1,10 @@
+# $Id: Makefile.prosplign.lib 144099 2008-10-27 13:39:51Z ucko $
+
+ASN_DEP = seqset
+
+SRC = prosplign scoring PSeq NSeq Ali  AliSeqAlign Info nucprot intron AlignInfo compartments
+
+LIB = prosplign
+
+CXXFLAGS = $(FAST_CXXFLAGS)
+LDFLAGS  = $(FAST_LDFLAGS)

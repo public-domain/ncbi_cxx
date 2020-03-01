@@ -1,0 +1,9 @@
+# $Id: Makefile.in 97110 2007-01-18 18:20:05Z vasilche $
+
+# Meta-makefile (object utilities)
+##################################
+
+LIB_PROJ = util
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

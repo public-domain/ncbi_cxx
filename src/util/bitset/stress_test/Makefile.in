@@ -1,0 +1,6 @@
+# $Id: Makefile.in 38328 2004-04-16 15:04:16Z kuznets $
+
+APP_PROJ = stress_test_bm
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

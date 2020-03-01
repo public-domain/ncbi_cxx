@@ -1,0 +1,10 @@
+# $Id: Makefile.in 68762 2005-09-01 15:29:25Z didenko $
+
+# Meta-makefile (test_loader_patcher)
+##################################
+
+APP_PROJ = test_loader_patcher
+
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

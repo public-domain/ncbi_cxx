@@ -1,0 +1,8 @@
+# $Id: Makefile.test_boost.lib 159017 2009-04-30 18:28:43Z ucko $
+
+SRC = test_boost
+LIB = test_boost
+
+CPPFLAGS = $(ORIG_CPPFLAGS) $(BOOST_INCLUDE)
+
+REQUIRES = Boost.Test.Included

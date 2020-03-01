@@ -1,0 +1,44 @@
+Oct 06, 2008
+First release using the release procedure
+
+January 28, 2009
+version 1.7.0
+Added support for Xcode build system version 3 (Mac OS X).
+Enhanced generation of flat makefile on Unix.
+Added protection against targets with the same name.
+
+February 10, 2009
+version 1.7.2
+Enhanced analysis of library-to-library dependencies
+
+February 12, 2009
+version 1.7.3
+Added possibility to specify USR_DEP macro in the toolkit makefiles
+to enforce static library build order.
+
+February 27, 2009
+version 1.7.4
+Corrected assembling DLLs in case of multiple projects with the same name
+Added 'rootdir' macro in ptb.ini
+Corrected DLL dependency analysis when working with import_project Windows script
+
+March 23, 2009
+version 1.7.5
+Produce list of generated and updated files.
+Optimize UNIX flat makefile to avoid attempts to build each project more than once.
+Check and exclude unneeded external projects.
+
+March 27, 2009
+version 1.7.6
+Bug fix: Corrected generation of unique build id in Unix flat makefile.
+
+April 21, 2009
+version 1.8.0
+Added generation of check commands lists on Xcode.
+Added possibility to specify target platform in command line.
+Modified generation of unique build id in Unix flat makefile to calculate it
+only once when building multiple targets.
+Added generation of Products group on Xcode.
+Added support of WATCHERS macro
+Merge Compiler.PreprocessorDefinitions defined in project and meta-msvc files.
+ 

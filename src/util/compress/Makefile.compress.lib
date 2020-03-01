@@ -1,0 +1,10 @@
+# $Id: Makefile.compress.lib 100550 2007-03-20 13:43:14Z ivanov $
+
+SRC = compress stream streambuf bzip2 zlib lzo reader_zlib tar
+
+LIB = xcompress
+
+DLL_LIB = 
+#$(COMPRESS_LDEP)
+
+CPPFLAGS = $(ORIG_CPPFLAGS) $(CMPRS_INCLUDE)

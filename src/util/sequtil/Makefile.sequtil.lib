@@ -1,0 +1,4 @@
+# $Id: Makefile.sequtil.lib 28471 2003-10-08 14:01:50Z shomrat $
+
+LIB = sequtil
+SRC = sequtil sequtil_convert sequtil_convert_imp sequtil_manip sequtil_tables sequtil_shared

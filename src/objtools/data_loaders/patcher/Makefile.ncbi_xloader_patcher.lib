@@ -1,0 +1,7 @@
+# $Id: Makefile.ncbi_xloader_patcher.lib 76241 2006-01-25 18:59:04Z didenko $
+
+LIB = ncbi_xloader_patcher
+SRC = loaderpatcher
+
+ASN_DEP = seq seqset seqedit
+

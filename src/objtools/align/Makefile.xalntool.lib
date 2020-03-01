@@ -1,0 +1,6 @@
+# $Id: Makefile.xalntool.lib 95060 2006-12-08 15:52:58Z ucko $
+
+ASN_DEP = seqset
+
+LIB = xalntool
+SRC = alngraphic

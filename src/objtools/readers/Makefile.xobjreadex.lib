@@ -1,0 +1,6 @@
+# $Id: Makefile.xobjreadex.lib 118708 2008-01-31 17:58:33Z ucko $
+
+ASN_DEP = seq seqset
+
+LIB = xobjreadex
+SRC = glimmer_reader

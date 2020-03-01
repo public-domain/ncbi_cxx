@@ -1,0 +1,4 @@
+# $Id: Makefile.tables.lib 26434 2003-08-21 19:48:21Z ucko $
+
+LIB = tables
+SRC = raw_scoremat

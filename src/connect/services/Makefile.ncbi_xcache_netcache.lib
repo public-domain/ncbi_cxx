@@ -1,0 +1,12 @@
+# $Id: Makefile.ncbi_xcache_netcache.lib 120679 2008-02-26 20:02:31Z kazimird $
+#
+
+SRC = neticache_client
+
+LIB = ncbi_xcache_netcache
+
+LIB_OR_DLL = both
+DLL_LIB = xconnserv xconnect xutil
+
+CPPFLAGS = $(ORIG_CPPFLAGS)
+LIBS = $(ORIG_LIBS)

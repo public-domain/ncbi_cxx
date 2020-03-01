@@ -1,0 +1,11 @@
+# $Id: Makefile.xalgotext.lib 96630 2007-01-10 00:40:18Z ucko $
+
+
+LIB = xalgotext
+
+SRC = text_util vector_serial
+
+CXXFLAGS = $(FAST_CXXFLAGS)
+LDFLAGS  = $(FAST_LDFLAGS)
+
+ASN_DEP = general

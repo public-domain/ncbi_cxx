@@ -1,0 +1,12 @@
+#################################
+# $Id: Makefile.in 93172 2006-11-08 00:26:43Z ucko $
+# Author:  Denis Vakatov (vakatov@ncbi.nlm.nih.gov)
+#################################
+
+# Meta-makefile
+#################################
+
+APP_PROJ = demo_html demo_html_template
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

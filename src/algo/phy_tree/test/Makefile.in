@@ -1,0 +1,9 @@
+# $Id: Makefile.in 41603 2004-06-10 15:23:44Z kuznets $
+
+# Meta-makefile (tests for biotree)
+#################################
+
+APP_PROJ = test_biotree
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

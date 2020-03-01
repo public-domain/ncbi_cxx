@@ -1,0 +1,8 @@
+# $Id: Makefile.in 121362 2008-03-05 20:08:25Z ucko $
+
+SUB_PROJ = cache pubseq id2 id1 pubseq2 test
+
+LIB_PROJ = ncbi_xreader ncbi_xloader_genbank
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

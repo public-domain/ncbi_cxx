@@ -1,0 +1,4 @@
+# $Id: Makefile.ehistory.lib 119825 2008-02-14 17:26:56Z grichenk $
+
+LIB = ehistory
+SRC = ehistory__ ehistory___

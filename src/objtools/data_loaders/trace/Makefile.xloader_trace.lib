@@ -1,0 +1,9 @@
+# $Id: Makefile.xloader_trace.lib 88994 2006-08-31 18:32:43Z ucko $
+
+# Build library "xloader_trace"
+###############################
+
+LIB = ncbi_xloader_trace
+SRC = trace_chgr
+
+ASN_DEP = id1

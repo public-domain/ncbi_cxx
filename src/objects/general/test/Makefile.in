@@ -1,0 +1,5 @@
+# $Id: Makefile.in 44211 2004-07-27 15:13:18Z ucko $
+
+APP_PROJ = test_date test_uoconv
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

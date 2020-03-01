@@ -1,0 +1,16 @@
+# $Id: Makefile.sources 114248 2007-11-19 15:03:42Z ucko $
+
+all: sources
+
+sources:
+	for x in mmdb1 mmdb2 mmdb3; do \
+	    d=$(srcdir)/../$$x ; \
+	    (cd $$d  &&  $(builddir)/new_module.sh) ; \
+	    test -f $${x}__.cpp  ||  \
+	        echo "#include \"../$$x/$${x}__.cpp\""  > $${x}__.cpp ; \
+	    test -f $${x}___.cpp  ||  \
+	        echo "#include \"../$$x/$${x}___.cpp\"" > $${x}___.cpp ; \
+	done
+
+clean:;
+purge:;

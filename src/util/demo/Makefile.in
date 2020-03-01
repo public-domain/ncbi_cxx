@@ -1,0 +1,9 @@
+# $Id: Makefile.in 79280 2006-03-21 16:41:55Z grichenk $
+
+# Meta-makefile("UTIL demo" project)
+#################################
+
+APP_PROJ = cache_demo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

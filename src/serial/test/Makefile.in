@@ -1,0 +1,10 @@
+# $Id: Makefile.in 60966 2005-04-27 20:53:58Z ucko $
+
+# Meta-makefile("TEST_SERIAL" project)
+#################################
+
+ASN_PROJ = we_cpp
+APP_PROJ = test_serial
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

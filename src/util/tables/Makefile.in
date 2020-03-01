@@ -1,0 +1,7 @@
+# $Id: Makefile.in 26434 2003-08-21 19:48:21Z ucko $
+
+LIB_PROJ = tables
+SUB_PROJ = test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

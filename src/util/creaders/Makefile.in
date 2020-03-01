@@ -1,0 +1,6 @@
+# $Id: Makefile.in 33718 2004-02-03 16:47:02Z ucko $
+
+LIB_PROJ = creaders
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

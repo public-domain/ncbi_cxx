@@ -1,0 +1,7 @@
+# $Id: Makefile.in 37941 2004-04-09 13:31:27Z gorelenk $
+
+APP_PROJ = msdbl_sp_who msdbl_lang
+REQUIRES = MSSQL
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

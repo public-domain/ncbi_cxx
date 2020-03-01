@@ -1,0 +1,11 @@
+# $Id: Makefile.in 101740 2007-04-09 16:17:28Z ssikorsk $
+
+USR_PROJ = @freetds@
+LIB_PROJ = ncbi_xdbapi_ftds8
+SUB_PROJ = samples
+POTENTIAL_SUB_PROJ = freetds
+
+REQUIRES = FreeTDS
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

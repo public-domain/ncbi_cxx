@@ -1,0 +1,40 @@
+#
+# Filename: Manifest
+#
+# $Id: Manifest 150268 2009-01-22 20:06:52Z satskyse $
+#
+# Author: Sergey Satskiy
+#
+# Purpose: This file holds all the supported configurations of a package
+#          It is used by release configurator.
+#
+
+APP: launcherd fwdaemon dispd.cgi
+#APP: lbsmd lbsm_feedback test_mghbn lbsmc testipub
+LIB: libconnect.a libconnext.a libmghbn.a liblbsmdapi.a
+
+
+COPY: $srcdir/src/connect/daemons/mod/*mod*  $installdir/src/
+COPY: $srcdir/include/connect/*.h            $installdir/include/connect/
+COPY: $srcdir/include/connect/ext/*.h        $installdir/include/connect/ext/
+COPY: $srcdir/include/connect/daemons/*.h    $installdir/include/connect/daemons/
+COPY: $srcdir/include/internal/webenv2/id.h  $installdir/include/internal/webenv2/
+
+# Each line describes a single configuration
+# The format is as follows:
+# <HardwareIdentifier> : <ReleaseSuffix> : <CompilerConfigurationScriptWithKeys>
+# Configuration script is relative to c++/compilers/unix/ .
+# Release configurator assumes that this script will eventually call standard configure script and pass all options
+# to it. So some standard options may be added by release configurator, such as --build-root-sfx, --with-projects,
+# --with-distcc, --with-action etc.
+Linux32    : ICC   : ICC.sh         --without-debug --without-mt --with-static --without-serial --without-runpath --with-flat-makefile
+Linux32    : GCC   : GCC.sh         --without-debug --without-mt --with-static --without-serial --without-runpath --with-flat-makefile
+Linux64    : ICC   : ICC.sh         --without-debug --without-mt --with-static --without-serial --without-runpath --with-flat-makefile
+Linux64    : GCC   : GCC.sh         --without-debug --without-mt --with-static --without-serial --without-runpath --with-flat-makefile
+FreeBSD32  : GCC   : GCC.sh         --without-debug --without-mt --with-static --without-serial --without-runpath --with-flat-makefile
+SunOSx86   : GCC   : GCC.sh         --without-debug --without-mt --with-static --without-serial --without-runpath --with-flat-makefile
+SunOSx86   : WS32  : WorkShop.sh 32 --without-debug --without-mt --with-static --without-serial --without-runpath --with-flat-makefile
+SunOSSparc : WS64  : WorkShop.sh 64 --without-debug --without-mt --with-static --without-serial --without-runpath --with-flat-makefile
+SunOSSparc : WS32  : WorkShop.sh 32 --without-debug --without-mt --with-static --without-serial --without-runpath --with-flat-makefile
+SunOSSparc : GCC   : GCC.sh         --without-debug --without-mt --with-static --without-serial --without-runpath --with-flat-makefile
+PowerMAC   : GCC   : GCC.sh         --without-debug --without-mt --with-static --without-serial --without-runpath --with-flat-makefile

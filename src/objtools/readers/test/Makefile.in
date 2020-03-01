@@ -1,0 +1,9 @@
+# $Id: Makefile.in 108954 2007-08-15 20:18:11Z sapojnik $
+
+# Meta-makefile
+#################################
+
+APP_PROJ = agp_count pacc
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

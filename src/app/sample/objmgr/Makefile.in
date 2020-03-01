@@ -1,0 +1,9 @@
+# $Id: Makefile.in 72684 2005-11-15 19:25:22Z didenko $
+
+# Meta-makefile
+#################################
+
+APP_PROJ = objmgr_sample bioseq_edit_sample
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,7 @@
+# $Id: Makefile.xobjwrite.lib 106810 2007-07-06 16:05:11Z ucko $
+
+ASN_DEP = seqset
+
+LIB = xobjwrite
+SRC = agp_write
+

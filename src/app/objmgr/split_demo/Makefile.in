@@ -1,0 +1,10 @@
+# $Id: Makefile.in 62539 2005-05-23 15:10:44Z ucko $
+
+# Meta-makefile("CACHE" project)
+#################################
+
+APP_PROJ = split_loader_demo
+SUB_PROJ = 
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta
